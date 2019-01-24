@@ -1,4 +1,4 @@
-# NFC EEPROM usage example
+NFC_EEPROM.hex# NFC EEPROM usage example
 
 Demonstration of possible usage of the NFC EEPROM class. 
 
@@ -51,11 +51,15 @@ For nRF52840_DK, run the following command(**Don't use mbed detect, mbed target 
 ```
 mbed compile –toolchain GCC_ARM –target NRF52840_DK
 ```
+Drag and drop the .\BUILD\NRF52840_DK\GCC_ARM\NFC_EEPROM.hex to the device 
+**(Don't drag and drop NFC_EEPROM_update.bin if you use nRF52840_DK as the target)**
+
 
 For NXP K64F, run the following command:
 ```
 mbed compile –toolchain GCC_ARM –target K64F
 ```
+Drag and drop the .\BUILD\NRF52840_DK\GCC_ARM\NFC_EEPROM_update.bin to the device 
 
 # Known issues
 
