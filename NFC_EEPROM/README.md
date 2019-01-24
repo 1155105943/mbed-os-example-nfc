@@ -23,7 +23,7 @@ You will also need to supply the driver for the EEPROM. This example is known to
 Clone the repository containing the collection of examples:
 
 ```
-git clone https://github.com/vince-zeng/mbed-os-example-nfc.git
+https://github.com/1155105943/mbed-os-example-nfc
 ```
 
 Using a command-line tool, navigate to the exmaple:
@@ -39,14 +39,6 @@ Update the source tree:
 mbed deploy
 ```
 
-If your board is not a DISCO\_L475VG\_IOT01A or a NUCLEO\_F401RE you should indicate in the configuration which driver should be selected by the build system. Edit `mbed_app.json` which contains the configuration. In the `target_overrides` section add your target configuration. The drivers currently supported are `PN512` and `M24SR`.
-
-```json
-    "<TARGET_NAME>": {
-        "target.extra_labels_add": ["<DRIVER_NAME>"]
-    }
-```
-
 
 Run the build:
 
@@ -54,9 +46,15 @@ Run the build:
 mbed compile -t <ARM | GCC_ARM> -m <YOUR_TARGET>
 ```
 
+
+For nRF52840_DK, run the following command(**Don't use mbed detect, mbed target auto or choose NRF52_DK as target!**):
+```
+mbed compile –toolchain GCC_ARM –target NRF52840_DK
+```
+
 For NXP K64F, run the following command:
 ```
-(5)	mbed compile –toolchain GCC_ARM –target K64F
+mbed compile –toolchain GCC_ARM –target K64F
 ```
 
 # Known issues
