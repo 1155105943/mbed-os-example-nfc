@@ -27,6 +27,7 @@
 #include "nfc/ndef/common/util.h"
 
 #include "SmartPoster.h"
+#include "mbed.h"
 
 using events::EventQueue;
 
